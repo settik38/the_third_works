@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>возраст</title>
+</head>
+<body>
+    <script>
+function calculateAge(yearOfBirth){
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - yearOfBirth;
+    if(yearOfBirth > currentYear || yearOfBirth < 1900){
+        return "Некорректный год рождения";
+    }
+    return `вам ${age} лет`;
+}
+const yearOfBirth = prompt("Введите ваш год рождения:");
+const ageOutput = calculateAge(parseInt(yearOfBirth));
+console.log(ageOutput);
+alert(` ${ageOutput}`);
+    </script>
+</body>
+</html>
